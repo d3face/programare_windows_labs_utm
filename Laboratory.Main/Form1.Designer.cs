@@ -89,6 +89,7 @@
             this.start_lab3.TabIndex = 2;
             this.start_lab3.Text = "Start Laboratory.3";
             this.start_lab3.UseVisualStyleBackColor = true;
+            this.start_lab3.Click += new System.EventHandler(this.start_lab3_Click);
             // 
             // start_lab4
             // 
@@ -98,6 +99,7 @@
             this.start_lab4.TabIndex = 3;
             this.start_lab4.Text = "Start Laboratory.4";
             this.start_lab4.UseVisualStyleBackColor = true;
+            this.start_lab4.Click += new System.EventHandler(this.start_lab4_Click);
             // 
             // start_lab5
             // 
@@ -107,6 +109,7 @@
             this.start_lab5.TabIndex = 4;
             this.start_lab5.Text = "Start Laboratory.5";
             this.start_lab5.UseVisualStyleBackColor = true;
+            this.start_lab5.Click += new System.EventHandler(this.start_lab5_Click);
             // 
             // start_lab6
             // 
@@ -116,6 +119,7 @@
             this.start_lab6.TabIndex = 5;
             this.start_lab6.Text = "Start Laboratory.6";
             this.start_lab6.UseVisualStyleBackColor = true;
+            this.start_lab6.Click += new System.EventHandler(this.start_lab6_Click);
             // 
             // Form1
             // 

@@ -26,5 +26,13 @@ namespace Laboratory.Main
         private void start_lab1_Click(object sender, EventArgs e) => StartLab();
 
         private void start_lab2_Click(object sender, EventArgs e) => StartLab();
+
+        private void start_lab3_Click(object sender, EventArgs e) => StartLab();
+
+        private void start_lab4_Click(object sender, EventArgs e) => StartLab();
+
+        private void start_lab5_Click(object sender, EventArgs e) => StartLab();
+
+        private void start_lab6_Click(object sender, EventArgs e) => StartLab();
     }
 }
