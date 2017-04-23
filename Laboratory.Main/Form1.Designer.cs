@@ -69,7 +69,7 @@
             this.start_lab1.TabIndex = 0;
             this.start_lab1.Text = "Start Laboratory.1";
             this.start_lab1.UseVisualStyleBackColor = true;
-            this.start_lab1.Click += new System.EventHandler(this.start_lab1_Click);
+            this.start_lab1.Click += new System.EventHandler(this.lab1);
             // 
             // start_lab2
             // 
@@ -79,7 +79,7 @@
             this.start_lab2.TabIndex = 1;
             this.start_lab2.Text = "Start Laboratory.2";
             this.start_lab2.UseVisualStyleBackColor = true;
-            this.start_lab2.Click += new System.EventHandler(this.start_lab2_Click);
+            this.start_lab2.Click += new System.EventHandler(this.lab2);
             // 
             // start_lab3
             // 
@@ -89,7 +89,7 @@
             this.start_lab3.TabIndex = 2;
             this.start_lab3.Text = "Start Laboratory.3";
             this.start_lab3.UseVisualStyleBackColor = true;
-            this.start_lab3.Click += new System.EventHandler(this.start_lab3_Click);
+            this.start_lab3.Click += new System.EventHandler(this.lab3);
             // 
             // start_lab4
             // 
@@ -99,7 +99,7 @@
             this.start_lab4.TabIndex = 3;
             this.start_lab4.Text = "Start Laboratory.4";
             this.start_lab4.UseVisualStyleBackColor = true;
-            this.start_lab4.Click += new System.EventHandler(this.start_lab4_Click);
+            this.start_lab4.Click += new System.EventHandler(this.lab4);
             // 
             // start_lab5
             // 
@@ -109,7 +109,7 @@
             this.start_lab5.TabIndex = 4;
             this.start_lab5.Text = "Start Laboratory.5";
             this.start_lab5.UseVisualStyleBackColor = true;
-            this.start_lab5.Click += new System.EventHandler(this.start_lab5_Click);
+            this.start_lab5.Click += new System.EventHandler(this.lab5);
             // 
             // start_lab6
             // 
@@ -119,7 +119,7 @@
             this.start_lab6.TabIndex = 5;
             this.start_lab6.Text = "Start Laboratory.6";
             this.start_lab6.UseVisualStyleBackColor = true;
-            this.start_lab6.Click += new System.EventHandler(this.start_lab6_Click);
+            this.start_lab6.Click += new System.EventHandler(this.lab6);
             // 
             // Form1
             // 
