@@ -69,6 +69,7 @@
             this.start_lab1.TabIndex = 0;
             this.start_lab1.Text = "Start Laboratory.1";
             this.start_lab1.UseVisualStyleBackColor = true;
+            this.start_lab1.Click += new System.EventHandler(this.start_lab1_Click);
             // 
             // start_lab2
             // 
@@ -78,6 +79,7 @@
             this.start_lab2.TabIndex = 1;
             this.start_lab2.Text = "Start Laboratory.2";
             this.start_lab2.UseVisualStyleBackColor = true;
+            this.start_lab2.Click += new System.EventHandler(this.start_lab2_Click);
             // 
             // start_lab3
             // 

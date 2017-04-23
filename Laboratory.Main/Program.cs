@@ -16,7 +16,8 @@ namespace Laboratory.Main
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.UnregisterMessageLoop();
             Application.Run(new Form1());
-        }
+        }        
     }
 }
