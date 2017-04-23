@@ -17,7 +17,7 @@ namespace Laboratory._4
         {
             InitializeComponent();
         }
-        private List<Point> sheep = new List<Point>
+        protected List<Point> sheep = new List<Point>
         {
             new Point { X = 0, Y = 0 },
             new Point { X = 0, Y = 50 },

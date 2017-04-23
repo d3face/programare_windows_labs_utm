@@ -100,6 +100,10 @@
       <Project>{dec8afdf-510c-47f8-975a-a77837cad45b}</Project>
       <Name>Laboratory.4</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Laboratory.5\Laboratory.5.csproj">
+      <Project>{d21d9b6a-6435-4cd2-a472-d575e100e9df}</Project>
+      <Name>Laboratory.5</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

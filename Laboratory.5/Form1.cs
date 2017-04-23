@@ -1,4 +1,5 @@
 ﻿using Laboratory._4;
+using FormLab3 = Laboratory._3.Form1;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,26 +14,16 @@ namespace Laboratory._5
 {
     public partial class FormLab5 : Form1
     {
+        private FormLab3 bezierOnPaint = new FormLab3();
         public FormLab5(): base()
         {
             InitializeComponent();
         }
-        private List<Point> points = new List<Point>
-        {
-            new Point { X = 10, Y = 10 },
-            new Point { X = 100, Y = 100 },
-            new Point { X = 120, Y = 200 },
-            new Point { X = 140, Y = 250 },
-
-            new Point { X = 160, Y = 310 },
-            new Point { X = 150, Y = 350 },
-            new Point { X = 80, Y = 360 },
-        };
+        private List<Point> points => this.bezierOnPaint.Points;
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            e.Graphics.DrawBeziers(new Pen(Color.Black, 2), points.Select(x => Point.Add(x, new Size(200, 100))).ToArray());
-            points.ForEach(x => e.Graphics.DrawRectangle(Pens.Black, x.X, x.Y, 2, 2));
+            this.bezierOnPaint.CallOnPaint(e);
         }
         protected Point? clickedPoint = null;
         protected override void OnMouseDown(MouseEventArgs e)

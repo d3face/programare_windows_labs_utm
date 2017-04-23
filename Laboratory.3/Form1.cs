@@ -26,11 +26,13 @@ namespace Laboratory._3
             new Point { X = 160, Y = 310 },
             new Point { X = 150, Y = 350 },
             new Point { X = 80, Y = 360 },
-        };
+        }.Select(x => Point.Add(x, new Size(200, 100))).ToList();
         protected override void OnPaint(PaintEventArgs e)
         {
-            e.Graphics.DrawBeziers(new Pen(Color.Black, 2), points.Select(x => Point.Add(x, new Size(200, 100))).ToArray());
-            points.ForEach(x => e.Graphics.DrawRectangle(Pens.Black, x.X, x.Y, 2, 2));
+            e.Graphics.DrawBeziers(new Pen(Color.Black, 2), points.Select(x => x).ToArray());
+            points.ForEach(x => e.Graphics.DrawRectangle(Pens.Red, x.X, x.Y, 2, 2));
         }
+        public void CallOnPaint(PaintEventArgs e) => this.OnPaint(e);
+        public List<Point> Points => this.points;
     }
 }
