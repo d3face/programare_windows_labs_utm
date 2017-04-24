@@ -20,11 +20,8 @@ namespace Laboratory._2
         }
         protected override void OnPaint(PaintEventArgs e)
         {
-            //base.OnPaint(e);
-            // Create pen.
             Pen blackPen = new Pen(Color.Black, 2);
 
-            // Create points that define line.
             Point point1 = new Point(100, 100);
             Point point2 = new Point(500, 100);
             int[] px = new int[100];
