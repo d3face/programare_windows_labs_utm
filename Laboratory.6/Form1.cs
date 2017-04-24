@@ -16,6 +16,9 @@ namespace Laboratory._6
         private const int centerY = 100;
         private const int radius = 200;
         private Timer clock = new Timer();
+        private DateTime now = DateTime.Now;
+        private bool isFaked = false;
+        private Random r = new Random();
         public Form1()
         {
             InitializeComponent();
@@ -27,37 +30,53 @@ namespace Laboratory._6
 
         private void Clock_Tick(object sender, EventArgs e)
         {
-            label1.Text = $"{DateTime.Now:s}";
+            now = DateTime.Now;
+            clock.Interval = isFaked ? (int)numericUpDown1.Value : 1000;
+            mode_name.Text = isFaked ? "faked" : "real";
+            if (isFaked) now = now.Add(new TimeSpan(r.Next() % 24, r.Next() % 60, r.Next() % 60));
+            label1.Text = $"{now:s}";
             this.Invalidate();
         }
         protected override void OnPaint(PaintEventArgs e)
         {
             e.Graphics.DrawEllipse(Pens.Red, centerX, centerY, radius, radius);
 
-            var realSecond = DateTime.Now.Second;
+            var realSecond = now.Second;
             var fakedSecond = -realSecond + 30;
             var point = Utilities.GetPointFromNumber(fakedSecond, radius / 2);
-            point = Point.Add(point, new Size(200, 200));
             e.Graphics.DrawLine(Pens.Blue, Center,
-                point
+                Point.Add(point, new Size(200, 200))
             );
+            second.Text = $"{realSecond} - {point}";
 
-            var realMinute = DateTime.Now.Minute;
+            var realMinute = now.Minute;
             var fakedMinute = -realMinute + 30;
             point = Utilities.GetPointFromNumber(fakedMinute, radius / 2, R.M);
-            point = Point.Add(point, new Size(200, 200));
             e.Graphics.DrawLine(Pens.BlueViolet, Center,
-                point
+                Point.Add(point, new Size(200, 200))
             );
+            minute.Text = $"{realMinute} - {point}";
 
-            var realHour = DateTime.Now.Hour;
-            var fakedHour = realHour;
+            var realHour = now.Hour;
+            var fakedHour = -realHour + 6;
             point = Utilities.GetPointFromNumber(fakedHour, radius / 2, R.H);
-            point = Point.Add(point, new Size(200, 200));
             e.Graphics.DrawLine(Pens.DodgerBlue, Center,
-                point
+                Point.Add(point, new Size(200, 200))
             );
+            hour.Text = $"{realHour} - {point}";
         }
         protected Point Center => new Point(centerX + radius / 2, centerY + radius / 2);
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.isFaked = !this.isFaked;
+            this.Clock_Tick(null, null);
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            this.isFaked = true;
+            this.Clock_Tick(null, null);
+        }
     }
 }

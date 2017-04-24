@@ -19,6 +19,18 @@ namespace Laboratory._6
             Assert.AreEqual(new System.Drawing.Point(0, radius), p);
         }
         [TestMethod]
+        public void Should_Return_3_Value_From_Hour()
+        {
+            var p = Utilities.GetPointFromNumber(3, radius, R.H);
+            Assert.AreEqual(new System.Drawing.Point(radius, 0), p);
+        }
+        [TestMethod]
+        public void Should_Return_15_Value_From_Hour()
+        {
+            var p = Utilities.GetPointFromNumber(15, radius, R.H);
+            Assert.AreEqual(new System.Drawing.Point(radius, 0), p);
+        }
+        [TestMethod]
         public void Should_Return_12_Value_From_Hour()
         {
             var p = Utilities.GetPointFromNumber(12, radius, R.H);
