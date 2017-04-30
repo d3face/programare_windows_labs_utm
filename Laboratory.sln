@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laboratory.1", "Laboratory.1\Laboratory.1.csproj", "{3CF8E071-1041-47FC-AC38-285643842732}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laboratory.Main", "Laboratory.Main\Laboratory.Main.csproj", "{84D9FE1B-1265-46E9-A537-13A8DF3D5182}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F131521C-F410-490C-B9A3-60C3647D4347} = {F131521C-F410-490C-B9A3-60C3647D4347}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laboratory.2", "Laboratory.2\Laboratory.2.csproj", "{DE9E4CD4-BCFD-4BE2-BF44-27544FD14FBD}"
 EndProject
@@ -16,6 +19,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laboratory.5", "Laboratory.5\Laboratory.5.csproj", "{D21D9B6A-6435-4CD2-A472-D575E100E9DF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laboratory.6", "Laboratory.6\Laboratory.6.csproj", "{7CB92E0F-0552-42B9-B0C2-9F58C5EF47CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laboratory.Notepad", "Laboratory.Notepad\Laboratory.Notepad.csproj", "{F131521C-F410-490C-B9A3-60C3647D4347}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +56,10 @@ Global
 		{7CB92E0F-0552-42B9-B0C2-9F58C5EF47CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CB92E0F-0552-42B9-B0C2-9F58C5EF47CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CB92E0F-0552-42B9-B0C2-9F58C5EF47CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F131521C-F410-490C-B9A3-60C3647D4347}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F131521C-F410-490C-B9A3-60C3647D4347}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F131521C-F410-490C-B9A3-60C3647D4347}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F131521C-F410-490C-B9A3-60C3647D4347}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

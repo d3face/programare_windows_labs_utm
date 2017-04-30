@@ -20,6 +20,7 @@ namespace Laboratory.Main
                 ["lab4"] = () => Laboratory._4.Program.Main(),
                 ["lab5"] = () => Laboratory._5.Program.Main(),
                 ["lab6"] = () => Laboratory._6.Program.Main(),
+                ["notepad"] = () => Laboratory.Notepad.Program.Main(),
             };
         }
         public static void Run(string what)

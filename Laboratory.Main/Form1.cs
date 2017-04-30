@@ -34,5 +34,7 @@ namespace Laboratory.Main
         private void lab5(object sender, EventArgs e) => StartLab();
 
         private void lab6(object sender, EventArgs e) => StartLab();
+
+        private void notepad(object sender, EventArgs e) => StartLab();
     }
 }

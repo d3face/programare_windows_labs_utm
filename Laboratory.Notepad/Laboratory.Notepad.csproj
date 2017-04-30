@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{84D9FE1B-1265-46E9-A537-13A8DF3D5182}</ProjectGuid>
+    <ProjectGuid>{F131521C-F410-490C-B9A3-60C3647D4347}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Laboratory.Main</RootNamespace>
-    <AssemblyName>Laboratory.Main</AssemblyName>
+    <RootNamespace>Laboratory.Notepad</RootNamespace>
+    <AssemblyName>Laboratory.Notepad</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -22,7 +22,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,6 +31,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -55,7 +57,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="LaboratoryReferences.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -80,38 +81,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Laboratory.1\Laboratory.1.csproj">
-      <Project>{3cf8e071-1041-47fc-ac38-285643842732}</Project>
-      <Name>Laboratory.1</Name>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </ProjectReference>
-    <ProjectReference Include="..\Laboratory.2\Laboratory.2.csproj">
-      <Project>{de9e4cd4-bcfd-4be2-bf44-27544fd14fbd}</Project>
-      <Name>Laboratory.2</Name>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </ProjectReference>
-    <ProjectReference Include="..\Laboratory.3\Laboratory.3.csproj">
-      <Project>{a2e2a0e1-4fb5-4bf0-8fc2-3b8e6edab54d}</Project>
-      <Name>Laboratory.3</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Laboratory.4\Laboratory.4.csproj">
-      <Project>{dec8afdf-510c-47f8-975a-a77837cad45b}</Project>
-      <Name>Laboratory.4</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Laboratory.5\Laboratory.5.csproj">
-      <Project>{d21d9b6a-6435-4cd2-a472-d575e100e9df}</Project>
-      <Name>Laboratory.5</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Laboratory.6\Laboratory.6.csproj">
-      <Project>{7cb92e0f-0552-42b9-b0c2-9f58c5ef47cc}</Project>
-      <Name>Laboratory.6</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Laboratory.Notepad\Laboratory.Notepad.csproj">
-      <Project>{f131521c-f410-490c-b9a3-60c3647d4347}</Project>
-      <Name>Laboratory.Notepad</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
