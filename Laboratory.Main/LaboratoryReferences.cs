@@ -20,7 +20,15 @@ namespace Laboratory.Main
                 ["lab4"] = () => Laboratory._4.Program.Main(),
                 ["lab5"] = () => Laboratory._5.Program.Main(),
                 ["lab6"] = () => Laboratory._6.Program.Main(),
-                ["notepad"] = () => Laboratory.Notepad.Program.Main(),
+                ["notepad"] = () =>
+                {
+                    ThreadStart p = () => Laboratory.Notepad.Program.Main();
+                    var r = new Thread(p);
+                    r.IsBackground = false;
+                    r.Priority = ThreadPriority.AboveNormal;
+                    r.TrySetApartmentState(ApartmentState.STA);
+                    r.Start();
+                },
             };
         }
         public static void Run(string what)

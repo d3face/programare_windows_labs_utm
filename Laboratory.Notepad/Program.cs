@@ -16,7 +16,9 @@ namespace Laboratory.Notepad
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Notepad42());
+            var notepad42 = new Notepad42();
+            Application.Run(notepad42);
+            notepad42.BringToFront();
         }
     }
 }

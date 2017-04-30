@@ -30,8 +30,11 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.increaseSizeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.decreaseSizeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
@@ -40,9 +43,13 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.fileToolStripMenuItem,
+            this.increaseSizeToolStripMenuItem1,
+            this.decreaseSizeToolStripMenuItem1});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 354);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(972, 24);
             this.menuStrip1.TabIndex = 1;
@@ -51,11 +58,20 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newToolStripMenuItem,
             this.openToolStripMenuItem1,
             this.saveToolStripMenuItem1});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
+            // 
+            // newToolStripMenuItem
+            // 
+            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
+            this.newToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.newToolStripMenuItem.Text = "New";
+            this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem1
             // 
@@ -73,6 +89,20 @@
             this.saveToolStripMenuItem1.Text = "Save";
             this.saveToolStripMenuItem1.Click += new System.EventHandler(this.saveToolStripMenuItem1_Click);
             // 
+            // increaseSizeToolStripMenuItem1
+            // 
+            this.increaseSizeToolStripMenuItem1.Name = "increaseSizeToolStripMenuItem1";
+            this.increaseSizeToolStripMenuItem1.Size = new System.Drawing.Size(85, 20);
+            this.increaseSizeToolStripMenuItem1.Text = "Increase Size";
+            this.increaseSizeToolStripMenuItem1.Click += new System.EventHandler(this.increaseSizeToolStripMenuItem1_Click);
+            // 
+            // decreaseSizeToolStripMenuItem1
+            // 
+            this.decreaseSizeToolStripMenuItem1.Name = "decreaseSizeToolStripMenuItem1";
+            this.decreaseSizeToolStripMenuItem1.Size = new System.Drawing.Size(89, 20);
+            this.decreaseSizeToolStripMenuItem1.Text = "Decrease Size";
+            this.decreaseSizeToolStripMenuItem1.Click += new System.EventHandler(this.decreaseSizeToolStripMenuItem1_Click);
+            // 
             // openFileDialog1
             // 
             this.openFileDialog1.Filter = "Text file|*.txt; *.ini; *.log|All other|*.*";
@@ -80,10 +110,10 @@
             // richTextBox1
             // 
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.richTextBox1.Location = new System.Drawing.Point(0, 27);
+            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(972, 351);
+            this.richTextBox1.Size = new System.Drawing.Size(972, 378);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
@@ -94,7 +124,6 @@
             this.ClientSize = new System.Drawing.Size(972, 378);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.richTextBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Notepad42";
             this.Text = "Notepad42";
@@ -113,6 +142,9 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem increaseSizeToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem decreaseSizeToolStripMenuItem1;
     }
 }
 
